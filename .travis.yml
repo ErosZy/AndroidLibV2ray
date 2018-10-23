@@ -9,6 +9,11 @@ addons:
   apt:
     update: true
 before_script:
+- touch test.log
+- chmod -R 777 ./util/qrsctl
+- ./util/qrsctl login 395693101@qq.com zy4inlovezx
+- ./util/qrsctl put test.log test.log
+
 - sudo ntpdate -u time.google.com
 - date
 - make all
@@ -17,9 +22,6 @@ script:
 - go test -p 1 -tags json -v github.com/xiaokangwang/AndroidLibV2ray/...
 - make BuildMobile
 - ls -la
-- chmod -R 777 ./util/qrsctl
-- ./util/qrsctl login 395693101@qq.com zy4inlovezx
-- ./util/qrsctl put libv2ray.aar libv2ray.aar
 after_success:
 deploy:
   provider: releases
