@@ -242,7 +242,7 @@ func (v *V2RayPoint) RunLoop() {
 	v.v2rayOP.Unlock()
 }
 
-func (v *V2RayPoint) setDataDir(path string){
+func (v *V2RayPoint) SetDataDir(path string){
 	v.status.SetDataDir(path);
 }
 
