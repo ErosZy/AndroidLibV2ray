@@ -16,6 +16,7 @@ before_script:
 script:
 - go test -p 1 -tags json -v github.com/xiaokangwang/AndroidLibV2ray/...
 - make BuildMobile
+- ls -la
 after_success:
 deploy:
   provider: releases
