@@ -243,7 +243,7 @@ func (v *V2RayPoint) RunLoop() {
 }
 
 func (v *V2RayPoint) setDataDir(path string){
-	v.status.Datadir = path
+	v.status.SetDataDir(path);
 }
 
 func (v *V2RayPoint) stopLoopW() {

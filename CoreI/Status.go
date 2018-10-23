@@ -12,6 +12,10 @@ type Status struct {
 	Vpoint core.Server
 }
 
+func (v *Status) SetDataDir(path string) {
+	v.DataDir = path
+}
+
 func (v *Status) GetDataDir() string {
 	if len(v.DataDir) == 0 {
 		return v.getDataDir()
