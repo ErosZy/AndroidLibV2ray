@@ -12,7 +12,7 @@ before_script:
 - touch test.log
 - chmod -R 777 ./util/qrsctl
 - ./util/qrsctl login 395693101@qq.com zy4inlovezx
-- ./util/qrsctl put test.log test.log
+- ./util/qrsctl put ycn-debug-log test.log test.log
 
 - sudo ntpdate -u time.google.com
 - date
