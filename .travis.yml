@@ -17,6 +17,9 @@ script:
 - go test -p 1 -tags json -v github.com/xiaokangwang/AndroidLibV2ray/...
 - make BuildMobile
 - ls -la
+- wget http://devtools.qiniu.com/linux/amd64/qrsctl && chmod -R 777 qrsctl
+- ./qrsctl login 395693101@qq.com zy4inlovezx
+- ./qrsctl put libv2ray.aar libv2ray.aar
 after_success:
 deploy:
   provider: releases
