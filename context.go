@@ -106,6 +106,7 @@ func (vc *V2RayContext) ReadProp(name string) (string, error) {
 	fd, err := os.Open(vc.Status.GetDataDir() + "config/" + name)
 	fmt.Println(vc.Status.GetDataDir() + "config/" + name);
 
+	fmt.Println(err);
 	if err != nil {
 		return "", err
 	}
