@@ -110,6 +110,7 @@ func (vc *V2RayContext) ReadProp(name string) (string, error) {
 		return "", err
 	}
 	content, err := ioutil.ReadAll(fd)
+	fmt.Println(err);
 	if err != nil {
 		return "", err
 	}
