@@ -8,12 +8,16 @@ type Status struct {
 	IsRunning       bool
 	VpnSupportnodup bool
 	PackageName     string
-
+	DataDir 		string
 	Vpoint core.Server
 }
 
 func (v *Status) GetDataDir() string {
-	return v.getDataDir()
+	if v.DataDir != '' {
+		return v.getDataDir()
+	}
+
+	return v.DataDir;
 }
 
 func (v *Status) getDataDir() string {

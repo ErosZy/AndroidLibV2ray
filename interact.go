@@ -242,6 +242,10 @@ func (v *V2RayPoint) RunLoop() {
 	v.v2rayOP.Unlock()
 }
 
+func (v *V2RayPoint) setDataDir(path string){
+	v.status.Datadir = path
+}
+
 func (v *V2RayPoint) stopLoopW() {
 	v.status.IsRunning = false
 	v.status.Vpoint.Close()
