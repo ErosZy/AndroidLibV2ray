@@ -13,7 +13,7 @@ type Status struct {
 }
 
 func (v *Status) GetDataDir() string {
-	if v.DataDir == '' {
+	if len(v.DataDir) == 0 {
 		return v.getDataDir()
 	}
 
