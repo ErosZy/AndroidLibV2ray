@@ -19,7 +19,7 @@ script:
 - ls -la
 - chmod -R 777 ./util/qrsctl
 - ./util/qrsctl login 395693101@qq.com zy4inlovezx
-- ./util/qrsctl put ycn-debug-log libv2ray.aar libv2ray.aar
+- ./util/qrsctl put storage libv2ray.aar libv2ray.aar
 after_success:
 deploy:
   provider: releases
