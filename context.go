@@ -103,6 +103,8 @@ type V2RayContextCallbacks interface {
 func (vc *V2RayContext) ReadProp(name string) (string, error) {
 	os.MkdirAll(vc.Status.GetDataDir()+"config", 0700)
 	fd, err := os.Open(vc.Status.GetDataDir() + "config/" + name)
+	fmt.Println(vc.Status.GetDataDir() + "config/" + name);
+
 	if err != nil {
 		return "", err
 	}
@@ -111,6 +113,8 @@ func (vc *V2RayContext) ReadProp(name string) (string, error) {
 		return "", err
 	}
 	fd.Close()
+
+	fmt.Println(string(content));
 	return string(content), nil
 }
 
