@@ -250,6 +250,7 @@ func (v *V2RayPoint) stopLoopW() {
 	v.status.IsRunning = false
 	v.status.Vpoint.Close()
 	if v.confng != nil {
+		fmt.Println(">>>>>>>>>>>>>>>>>>>>>>>stopLoopW");
 		v.UpdownScripts.RunDownScript()
 		/* TODO:Run Down Script
 		if v.conf != nil {
@@ -276,6 +277,8 @@ func (v *V2RayPoint) stopLoopW() {
  */
 func (v *V2RayPoint) StopLoop() {
 	v.v2rayOP.Lock()
+	fmt.Println(">>>>>>>>>>>>>>>>>>>>>>>StopLoop")
+	fmt.Println(v.status.IsRunning)
 	if v.status.IsRunning {
 		/* TODO: Shutdown VPN
 		v.vpnShutdown()
