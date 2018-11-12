@@ -69,7 +69,7 @@ func (v *VPNSupport) VpnShutdown() {
 		err := unix.Close(v.VpnSupportSet.GetVPNFd())
 		println(err)
 		//}
-		v.VpnSupportSet.Shutdown()
+		// v.VpnSupportSet.Shutdown()
 		// if !v.usewaVingOceanVPNBackend {
 		// 	v.Estr.EscortingDown()
 		// } else {
