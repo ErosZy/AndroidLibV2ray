@@ -246,6 +246,7 @@ func (v *V2RayPoint) SetDataDir(path string){
 	v.status.SetDataDir(path);
 }
 
+// something bug?
 func (v *V2RayPoint) stopLoopW() {
 	v.status.IsRunning = false
 	v.status.Vpoint.Close()
