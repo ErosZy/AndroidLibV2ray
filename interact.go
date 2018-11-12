@@ -261,8 +261,8 @@ func (v *V2RayPoint) stopLoopW() {
 			if err != nil {
 				log.Trace(errors.New("OnDown failed to exec").Base(err))
 			}*/
-		v.VPNSupports.VpnShutdown()
-		// v.escorter.EscortingDown()
+		// v.VPNSupports.VpnShutdown()
+		v.escorter.EscortingDown()
 		/* TODO: Escort Down
 			log.Trace(errors.New("v.escortingDown()"))
 			v.escortingDown()
