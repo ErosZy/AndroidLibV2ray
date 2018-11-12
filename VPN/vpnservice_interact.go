@@ -70,12 +70,11 @@ func (v *VPNSupport) VpnShutdown() {
 		println(err)
 		//}
 		v.VpnSupportSet.Shutdown()
-		if !v.usewaVingOceanVPNBackend {
-			v.Estr.EscortingDown()
-		} else {
-			v.stopNextGen()
-		}
-
+		// if !v.usewaVingOceanVPNBackend {
+		// 	v.Estr.EscortingDown()
+		// } else {
+		// 	v.stopNextGen()
+		// }
 	}
 	v.status.VpnSupportnodup = false
 }
