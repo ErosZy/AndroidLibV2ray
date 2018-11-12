@@ -66,15 +66,15 @@ func (v *VPNSupport) VpnShutdown() {
 		*/
 
 		//if v.VpnSupportnodup {
-		err := unix.Close(v.VpnSupportSet.GetVPNFd())
-		println(err)
+		// err := unix.Close(v.VpnSupportSet.GetVPNFd())
+		// println(err)
 		//}
-		// v.VpnSupportSet.Shutdown()
-		// if !v.usewaVingOceanVPNBackend {
-		// 	v.Estr.EscortingDown()
-		// } else {
-		// 	v.stopNextGen()
-		// }
+		v.VpnSupportSet.Shutdown()
+		if !v.usewaVingOceanVPNBackend {
+			v.Estr.EscortingDown()
+		} else {
+			v.stopNextGen()
+		}
 	}
 	v.status.VpnSupportnodup = false
 }
