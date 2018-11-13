@@ -44,5 +44,5 @@ buildVGO:
 BuildMobile:
 	@echo Stub
 
-all: asset pb shippedBinary fetchDep
+all: pb shippedBinary fetchDep
 	@echo DONE
