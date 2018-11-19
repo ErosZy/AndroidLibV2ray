@@ -18,7 +18,7 @@ func (vd *V2Dialer) Dial(network, address string, port uint16, ctx context.Conte
 	var dest net.Addr
 	var err error
 
-	log.Println(">>>>>>>>>>>>>>>>>>>>>>>>> 2 network: ", network, " address: ", Address);
+	log.Println(">>>>>>>>>>>>>>>>>>>>>>>>> 2 network: ", network, " address: ", address);
 
 	switch network {
 	case "tcp4":
