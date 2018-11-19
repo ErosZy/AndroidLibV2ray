@@ -39,6 +39,7 @@ func (sDialer *vpnProtectedDialer) Dial(network, Address string) (net.Conn, erro
 		}
 
 		//Protect socket fd!
+		log.Println(">>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		log.Println("Protecting Sock:", fd)
 		sDialer.vp.VpnSupportSet.Protect(fd)
 
@@ -85,6 +86,7 @@ func (sDialer *vpnProtectedDialer) Dial(network, Address string) (net.Conn, erro
 		}
 
 		//Protect socket fd!
+		log.Println(">>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		log.Println("Protecting Sock:", fd)
 		sDialer.vp.VpnSupportSet.Protect(fd)
 
