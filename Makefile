@@ -14,14 +14,18 @@ fetchDep:
 	go get github.com/ErosZy/v2ray-core
 	rm -rf $(GOPATH)/src/v2ray.com && mkdir $(GOPATH)/src/v2ray.com
 	mv $(GOPATH)/src/github.com/ErosZy/v2ray-core $(GOPATH)/src/v2ray.com/core
+	ls -la $(GOPATH)/src/
 	-go get  github.com/xiaokangwang/V2RayConfigureFileUtil
 	-cd $(GOPATH)/src/github.com/xiaokangwang/V2RayConfigureFileUtil;$(MAKE) all
+	ls -la $(GOPATH)/src/
 	go get  github.com/xiaokangwang/V2RayConfigureFileUtil
 	-go get  github.com/xiaokangwang/AndroidLibV2ray
 	-cd $(GOPATH)/src/github.com/xiaokangwang/libV2RayAuxiliaryURL; $(MAKE) all
+	ls -la $(GOPATH)/src/
 	-go get  github.com/xiaokangwang/AndroidLibV2ray
 	-cd $(GOPATH)/src/github.com/xiaokangwang/waVingOcean/configure; $(MAKE) pb
 	go get github.com/xiaokangwang/AndroidLibV2ray
+	ls -la $(GOPATH)/src/
 
 ANDROID_HOME=$(HOME)/android-sdk-linux
 export ANDROID_HOME
