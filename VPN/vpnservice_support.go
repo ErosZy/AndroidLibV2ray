@@ -1,6 +1,7 @@
 package VPN
 
 import (
+	"fmt"
 	"errors"
 	"log"
 	"net"
@@ -16,7 +17,7 @@ type vpnProtectedDialer struct {
 }
 
 func (sDialer *vpnProtectedDialer) Dial(network, Address string) (net.Conn, error) {
-	log.Println(">>>>>>>>>>>>>>>>>>>>>>>>> network: ", network, " address: ", Address);
+	fmt.Println(">>>>>>>>>>>>>>>>>>>>>>>>> network: " + network + " address: " + Address);
 	if strings.HasPrefix(network, "tcp") {
 
 		var addr *net.TCPAddr
@@ -39,7 +40,7 @@ func (sDialer *vpnProtectedDialer) Dial(network, Address string) (net.Conn, erro
 		}
 
 		//Protect socket fd!
-		log.Println(">>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		fmt.Println(">>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		log.Println("Protecting Sock:", fd)
 		sDialer.vp.VpnSupportSet.Protect(fd)
 
@@ -86,7 +87,7 @@ func (sDialer *vpnProtectedDialer) Dial(network, Address string) (net.Conn, erro
 		}
 
 		//Protect socket fd!
-		log.Println(">>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		fmt.Println(">>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		log.Println("Protecting Sock:", fd)
 		sDialer.vp.VpnSupportSet.Protect(fd)
 
