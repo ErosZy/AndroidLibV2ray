@@ -11,6 +11,9 @@ shippedBinary:
 	cd shippedBinarys; $(MAKE) shippedBinary
 
 fetchDep:
+	go get github.com/ErosZy/v2ray-core
+	mkdir $(GOPATH)/src/v2ray.com
+	mv $(GOPATH)/src/ErosZy/v2ray-core $(GOPATH)/src/v2ray.com/core
 	-go get  github.com/xiaokangwang/V2RayConfigureFileUtil
 	-cd $(GOPATH)/src/github.com/xiaokangwang/V2RayConfigureFileUtil;$(MAKE) all
 	go get  github.com/xiaokangwang/V2RayConfigureFileUtil
