@@ -13,8 +13,8 @@ import (
 
 	"golang.org/x/sys/unix"
 
-	"github.com/ErosZy/v2ray-core"
-	"github.com/ErosZy/v2ray-core/transport/internet"
+	"v2ray.com/core"
+	"v2ray.com/core/transport/internet"
 )
 
 /*VpnSupportReady VpnSupportReady*/

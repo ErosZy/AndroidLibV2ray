@@ -7,8 +7,8 @@ import (
 
 	"github.com/ErosZy/AndroidLibV2ray/CoreI"
 
-	"github.com/ErosZy/v2ray-core"
-	_ "github.com/ErosZy/v2ray-core/main/distro/all"
+	"v2ray.com/core"
+	_ "v2ray.com/core/main/distro/all"
 )
 
 /*CheckVersion int
