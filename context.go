@@ -8,7 +8,7 @@ import (
 	"strings"
 	"fmt"
 
-	"github.com/xiaokangwang/AndroidLibV2ray/CoreI"
+	"github.com/ErosZy/AndroidLibV2ray/CoreI"
 )
 
 func NewLib2rayContext() *V2RayContext {

@@ -5,8 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/xiaokangwang/AndroidLibV2ray/CoreI"
-	"github.com/xiaokangwang/AndroidLibV2ray/configure"
+	"github.com/ErosZy/AndroidLibV2ray/CoreI"
+	"github.com/ErosZy/AndroidLibV2ray/configure"
 )
 
 func (v *EnvironmentCreater) AddEnvironment(env []string) []string {

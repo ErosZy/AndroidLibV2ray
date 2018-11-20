@@ -5,7 +5,7 @@ package libv2ray
 import (
 	"fmt"
 
-	"github.com/xiaokangwang/AndroidLibV2ray/CoreI"
+	"github.com/ErosZy/AndroidLibV2ray/CoreI"
 
 	"github.com/ErosZy/v2ray-core"
 	_ "github.com/ErosZy/v2ray-core/main/distro/all"
