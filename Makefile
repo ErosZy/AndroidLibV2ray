@@ -18,9 +18,9 @@ fetchDep:
 	go get github.com/xiaokangwang/waVingOcean
 	go get github.com/xiaokangwang/libV2RayAuxiliaryURL
 	go get github.com/xiaokangwang/V2RayConfigureFileUtil
-	cd $(GOPATH)/src/github.com/xiaokangwang/V2RayConfigureFileUtil;$(MAKE) all
-	cd $(GOPATH)/src/github.com/xiaokangwang/libV2RayAuxiliaryURL; $(MAKE) all
-	cd $(GOPATH)/src/github.com/xiaokangwang/waVingOcean/configure; $(MAKE) pb
+	-cd $(GOPATH)/src/github.com/xiaokangwang/V2RayConfigureFileUtil;$(MAKE) all
+	-cd $(GOPATH)/src/github.com/xiaokangwang/libV2RayAuxiliaryURL; $(MAKE) all
+	-cd $(GOPATH)/src/github.com/xiaokangwang/waVingOcean/configure; $(MAKE) pb
 
 	go get github.com/ErosZy/AndroidLibV2ray
 
