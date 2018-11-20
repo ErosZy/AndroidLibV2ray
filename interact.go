@@ -11,7 +11,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"v2ray.com/core"
+	"github.com/ErosZy/v2ray-core"
 	"v2ray.com/ext/sysio"
 
 	"github.com/golang/protobuf/proto"
