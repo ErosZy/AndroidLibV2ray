@@ -2,7 +2,7 @@ sudo: required
 language: go
 go:
   - "1.11"
-go_import_path: github.com/xiaokangwang/AndroidLibV2ray
+go_import_path: github.com/ErosZy/AndroidLibV2ray
 git:
   depth: 5
 addons:
@@ -14,8 +14,7 @@ before_script:
 - make all
 - make downloadGoMobile
 script:
-- go test -p 1 -tags json -v github.com/xiaokangwang/AndroidLibV2ray/...
-- make BuildMobile
+- go test -p 1 -tags json -v github.com/ErosZy/AndroidLibV2ray/...
 - ls -la
 - chmod -R 777 ./util/qrsctl
 - ./util/qrsctl login 395693101@qq.com zy4inlovezx
