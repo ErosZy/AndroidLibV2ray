@@ -12,6 +12,7 @@ import (
 	"time"
 
 	"v2ray.com/core"
+	"v2ray.com/core/export"
 	"v2ray.com/ext/sysio"
 
 	"github.com/golang/protobuf/proto"
