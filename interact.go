@@ -365,13 +365,13 @@ type V2RayVPNServiceSupportsSet interface {
 	OnUDPBuffer([]byte) int
 }
 
-type internelUDPBufferExport struct{
+var supportSet V2RayVPNServiceSupportsSet = nil
 
-}
+type internelUDPBufferExport struct{}
 
 func (v *internelUDPBufferExport) OnData(data []byte) int {
-	if v.VPNSupports.VpnSupportSet != nil {
-		v.VPNSupports.VpnSupportSet.OnUDPBuffer(data)
+	if supportSet != nil {
+		supportSet.OnUDPBuffer(data)
 	}
 	return 0
 }
@@ -385,6 +385,7 @@ func (v *V2RayPoint) VpnSupportReady() {
 //Delegate Funcation
 func (v *V2RayPoint) SetVpnSupportSet(vs V2RayVPNServiceSupportsSet) {
 	v.VPNSupports.VpnSupportSet = vs
+	supportSet = vs
 }
 
 func (v *V2RayPoint) OptinNextGenerationTunInterface() {
