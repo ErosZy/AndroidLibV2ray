@@ -15,11 +15,12 @@ fetchDep:
 	rm -rf $(GOPATH)/src/v2ray.com && mkdir -p $(GOPATH)/src/v2ray.com
 	mv $(GOPATH)/src/github.com/ErosZy/v2ray-core $(GOPATH)/src/v2ray.com/core
 
-	go get github.com/xiaokangwang/waVingOcean
-	go get github.com/xiaokangwang/libV2RayAuxiliaryURL
-	go get github.com/xiaokangwang/V2RayConfigureFileUtil
+	-go get  github.com/xiaokangwang/V2RayConfigureFileUtil
 	-cd $(GOPATH)/src/github.com/xiaokangwang/V2RayConfigureFileUtil;$(MAKE) all
+	go get  github.com/xiaokangwang/V2RayConfigureFileUtil
+	-go get  github.com/xiaokangwang/AndroidLibV2ray
 	-cd $(GOPATH)/src/github.com/xiaokangwang/libV2RayAuxiliaryURL; $(MAKE) all
+	-go get  github.com/xiaokangwang/AndroidLibV2ray
 	-cd $(GOPATH)/src/github.com/xiaokangwang/waVingOcean/configure; $(MAKE) pb
 
 	go get github.com/ErosZy/AndroidLibV2ray
