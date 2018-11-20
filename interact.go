@@ -378,6 +378,6 @@ func (v *V2RayPoint) OptinNextGenerationTunInterface() {
 	v.VPNSupports.OptinNextGenerationTunInterface()
 }
 
-func (v *V2RayPoint) SetUDPBufferExport(e core.UDPBufferExport) {
-	core.SetUDPBufferExport(e)
+func (v *V2RayPoint) SetUDPBufferExport(e export.UDPBufferExport) {
+	export.SetUDPBufferExport(e)
 }
