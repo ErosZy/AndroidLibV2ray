@@ -16,7 +16,6 @@ type vpnProtectedDialer struct {
 }
 
 func (sDialer *vpnProtectedDialer) Dial(network, Address string) (net.Conn, error) {
-	log.Println(">>>>>>>>>>>>>>>>>>>>>>>>> 1 network: ", network, " address: ", Address);
 	if strings.HasPrefix(network, "tcp") {
 
 		var addr *net.TCPAddr
