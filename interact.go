@@ -376,3 +376,7 @@ func (v *V2RayPoint) SetVpnSupportSet(vs V2RayVPNServiceSupportsSet) {
 func (v *V2RayPoint) OptinNextGenerationTunInterface() {
 	v.VPNSupports.OptinNextGenerationTunInterface()
 }
+
+func (v *V2RayPoint) SetUDPBufferExport(e core.UDPBufferExport) {
+	core.SetUDPBufferExport(e)
+}
