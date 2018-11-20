@@ -1,7 +1,7 @@
 pb:
 	  go get -u github.com/golang/protobuf/protoc-gen-go
-		@echo "pb Start"
-		cd configure && make pb
+	  @echo "pb Start"
+	  cd configure && make pb
 asset:
 	mkdir assets
 	cd assets;curl https://cdn.rawgit.com/v2ray/v2ray-core/e60de73c704d46d91633035e6b06184f7186a4e0/tools/release/config/geosite.dat > geosite.dat
@@ -14,30 +14,15 @@ fetchDep:
 	go get github.com/ErosZy/v2ray-core
 	rm -rf $(GOPATH)/src/v2ray.com && mkdir $(GOPATH)/src/v2ray.com
 	mv $(GOPATH)/src/github.com/ErosZy/v2ray-core $(GOPATH)/src/v2ray.com/core
-	-go get  github.com/xiaokangwang/V2RayConfigureFileUtil
-	-cd $(GOPATH)/src/github.com/xiaokangwang/V2RayConfigureFileUtil;$(MAKE) all
-	grep '>>>>>>>>>>>>>>>>>>' $(GOPATH)/src/v2ray.com/core/proxy/shadowsocks/server.go
 
-	go get github.com/ErosZy/v2ray-core
-	rm -rf $(GOPATH)/src/v2ray.com && mkdir $(GOPATH)/src/v2ray.com
-	mv $(GOPATH)/src/github.com/ErosZy/v2ray-core $(GOPATH)/src/v2ray.com/core
-	go get  github.com/xiaokangwang/V2RayConfigureFileUtil
-	-go get  github.com/xiaokangwang/AndroidLibV2ray
-	-cd $(GOPATH)/src/github.com/xiaokangwang/libV2RayAuxiliaryURL; $(MAKE) all
-	grep '>>>>>>>>>>>>>>>>>>' $(GOPATH)/src/v2ray.com/core/proxy/shadowsocks/server.go
+	go get github.com/xiaokangwang/waVingOcean
+	go get github.com/xiaokangwang/libV2RayAuxiliaryURL
+	go get github.com/xiaokangwang/V2RayConfigureFileUtil
+	cd $(GOPATH)/src/github.com/xiaokangwang/V2RayConfigureFileUtil;$(MAKE) all
+	cd $(GOPATH)/src/github.com/xiaokangwang/libV2RayAuxiliaryURL; $(MAKE) all
+	cd $(GOPATH)/src/github.com/xiaokangwang/waVingOcean/configure; $(MAKE) pb
 
-	go get github.com/ErosZy/v2ray-core
-	rm -rf $(GOPATH)/src/v2ray.com && mkdir $(GOPATH)/src/v2ray.com
-	mv $(GOPATH)/src/github.com/ErosZy/v2ray-core $(GOPATH)/src/v2ray.com/core
-	-go get  github.com/xiaokangwang/AndroidLibV2ray
-	-cd $(GOPATH)/src/github.com/xiaokangwang/waVingOcean/configure; $(MAKE) pb
-	grep '>>>>>>>>>>>>>>>>>>' $(GOPATH)/src/v2ray.com/core/proxy/shadowsocks/server.go
-
-	go get github.com/ErosZy/v2ray-core
-	rm -rf $(GOPATH)/src/v2ray.com && mkdir $(GOPATH)/src/v2ray.com
-	mv $(GOPATH)/src/github.com/ErosZy/v2ray-core $(GOPATH)/src/v2ray.com/core
 	go get github.com/xiaokangwang/AndroidLibV2ray
-	grep '>>>>>>>>>>>>>>>>>>' $(GOPATH)/src/v2ray.com/core/proxy/shadowsocks/server.go
 
 ANDROID_HOME=$(HOME)/android-sdk-linux
 export ANDROID_HOME
@@ -49,7 +34,7 @@ downloadGoMobile:
 	cd ~ ;curl -L https://gist.githubusercontent.com/xiaokangwang/4a0f19476d86213ef6544aa45b3d2808/raw/ff5eb88663065d7159d6272f7b2eea0bd8b7425a/ubuntu-cli-install-android-sdk.sh | sudo bash - > /dev/null
 	ls ~
 	ls ~/android-sdk-linux/
-	gomobile init -ndk ~/android-ndk-r15c;gomobile bind -v  -tags json github.com/xiaokangwang/AndroidLibV2ray
+	gomobile init -ndk ~/android-ndk-r15c;gomobile bind -v  -tags json 
 
 buildVGO:
 	git clone https://github.com/xiaokangwang/V2RayGO.git
